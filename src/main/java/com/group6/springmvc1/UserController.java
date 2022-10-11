@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
     @RequestMapping(value = "/aaa")
-    public void login(String username, String password){
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println("hello, 进入到方法内部了");
+    public String login(String username, String password){
+        if(username.equals("tom")&&password.equals("123")){
+            return "index";
+        } else {
+
+            return "mis";
+        }
+//        System.out.println("hello, 进入到方法内部了");
     }
 }
